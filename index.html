@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carton en Fête - Notices</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 1.8em;
+        }
+        
+        .notice-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .notice-title {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .notice-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .notice-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .btn {
+            display: block;
+            background: #667eea;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            color: #999;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="images/logo.png" alt="SICAL" class="logo">
+            <h1>🎉 Carton en Fête - Notices de Montage</h1>
+        </div>
+        
+        <div class="notice-box">
+            <div class="notice-title">📋 Notice n°1 - Fiche de Briefing</div>
+            <img src="images/notice1.png" alt="Notice 1" class="notice-image" onclick="openLightbox(this.src)">
+            <a href="fiche_briefing_reunion_DSI_bleu_blanc_v2.pdf" class="btn" download>📥 Télécharger le PDF</a>
+        </div>
+        
+        <!-- Prêt pour notice 2 -->
+        
+        <div class="footer">
+            Event temporaire - Documents disponibles pour la durée de l'événement
+        </div>
+    </div>
+    
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Zoom">
+    </div>
+    
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = src;
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
