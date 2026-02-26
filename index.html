@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carton en Fête - Notices</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .notice-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .notice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .notice-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .notice-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .notice-desc {
+            opacity: 0.9;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="SICAL" class="logo">
+        <h1>🎉 Carton en Fête</h1>
+        <p class="subtitle">Notices de montage</p>
+        
+        <a href="fiche_briefing_reunion_DSI_bleu_blanc_v2.pdf" target="_blank" class="notice-card">
+            <div class="notice-icon">📋</div>
+            <div class="notice-title">Notice n°1</div>
+            <div class="notice-desc">Fiche de Briefing<br>Cliquez pour ouvrir</div>
+        </a>
+        
+        <!-- Prêt pour notice 2 
+        <a href="notice2.pdf" target="_blank" class="notice-card">
+            <div class="notice-icon">📋</div>
+            <div class="notice-title">Notice n°2</div>
+            <div class="notice-desc">Cliquez pour ouvrir</div>
+        </a>
+        -->
+        
+        <div class="footer">
+            Event temporaire
+        </div>
+    </div>
+</body>
+</html>
