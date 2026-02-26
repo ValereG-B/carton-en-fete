@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notices de Montage - Carton en Fête</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .notice-container {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .notice-container:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .notice-title {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .pdf-viewer {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .pdf-viewer {
+                height: 500px;
+            }
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Carton en Fête</h1>
+        <p class="subtitle">Notices de montage</p>
+        
+        <div class="notice-container">
+            <h2 class="notice-title">📋 Notice n°1 - Fiche de Briefing</h2>
+            <embed class="pdf-viewer" src="fiche_briefing_reunion_DSI_bleu_blanc_v2.pdf" type="application/pdf">
+            <a href="fiche_briefing_reunion_DSI_bleu_blanc_v2.pdf" class="btn" download>📥 Télécharger le PDF</a>
+        </div>
+        
+        <!-- Prêt pour la notice n°2 -->
+        <!-- 
+        <div class="notice-container">
+            <h2 class="notice-title">📋 Notice n°2</h2>
+            <embed class="pdf-viewer" src="notice2.pdf" type="application/pdf">
+            <a href="notice2.pdf" class="btn" download>📥 Télécharger le PDF</a>
+        </div>
+        -->
+        
+        <div class="footer">
+            Event temporaire - Documents disponibles pour la durée de l'événement
+        </div>
+    </div>
+</body>
+</html>
